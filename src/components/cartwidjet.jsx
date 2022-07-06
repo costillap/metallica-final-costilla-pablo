@@ -1,7 +1,12 @@
 import logo from "./carrito.png";
 const CartWidjet = () => {
-    return (
-        <img style={{width:20}} src={logo} alt="" />
+  const amount= 2;  
+  return (
+    <>
+      <img style={{width:20}} src={logo} alt=""/>
+      {amount}
+    </>
+        
       );
 }
  

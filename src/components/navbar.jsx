@@ -13,8 +13,8 @@ const NavBar = () => {
                 <span className="nav-link fs-4 p-2" >
                     <a className="nav-link text-black" href="">productos</a>
                 </span>
-                <span className="nav-link fs-4 p-2" >
-                   <a href=""><CartWidjet/></a> 
+                <span className="nav-link fs-4 p-2 text-black" >
+                   <CartWidjet/> 
                 </span>
            </div>
         </nav>
