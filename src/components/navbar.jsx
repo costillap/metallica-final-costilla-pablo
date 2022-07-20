@@ -1,22 +1,16 @@
 import CartWidjet from "./cartwidjet";
 import logo from './img/logo.png';
+import {Link} from "react-router-dom";
 const NavBar = () => {
     return (
         <nav className="navbar p-2">
-           <div className="p-1">
-                <img style={{width:50}} src={logo} alt="" />
-           </div>
-           <div className="nav">
-                <span className="nav-link fs-4 p-2" >
-                    <a className="nav-link text-light" href="">INCIO</a>
-                </span>
-                <span className="nav-link fs-4 p-2" >
-                    <a className="nav-link text-light" href="">PRODUCTOS</a>
-                </span>
-                <span className="nav-link fs-4 pt-2 mt-1 text-light" >
-                   <CartWidjet/> 
-                </span>
-           </div>
+            <div><img style={{width:50}} src={logo} alt="" /></div>
+           
+            <div className="nav navbar-dark">
+                <a className="nav-link" style={{color: "white"}} href="">home</a>
+                <a className="nav-link" style={{color: "white"}} href="">productos</a>
+                <a className="nav-link" style={{color: "white"}} href=""><CartWidjet></CartWidjet></a>    
+            </div>
         </nav>
     );
 }
