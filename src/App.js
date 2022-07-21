@@ -4,12 +4,21 @@ import 'bootstrap';
 import NavBar from "./components/navbar"
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/itemCount';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import ItemDetalContainer from './components/itemDetailContainer';
+
 
 function App() {
   return (
     <>
+    <BrowserRouter>
     <NavBar/>
-    <ItemListContainer greeting={"When a man lies he murders some part of the world. These are the pale deaths which men miscall their lives. All this I cannot bear to witness any longer. Cannot the kingdom of salvation take me home...(To live is to die)"}/>  
+      <Routes>
+        <Route index path='/' element={<ItemListContainer/>}/>
+        <Route path='item/:id' element={<ItemDetalContainer/>}/>        
+        <Route path='*' element={<div className='container text-center col-2' style={{backgroundColor: "grey"}}>Error 404 Not Found</div>} />
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }

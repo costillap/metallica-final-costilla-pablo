@@ -1,7 +1,21 @@
-import ItemDetail from "./itemDetail"
+import ItemDetail from "./itemDetail";
+import { useEffect } from "react";
+import { useState } from "react";
+import data from "./utils/data.json"
+import { useParams } from "react-router-dom";
 
-const ItemDetalContainer = () => {
-    return
-    <ItemDetail/>      
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState({})
+    const {id} = useParams();
+    const promise = new Promise((resolve) =>{
+        setTimeout(() => resolve(data), 1000)
+    });
+    useEffect(()=>{
+        promise.then((response) =>{
+            const foundItem = response.filter(item => item.id == id)
+            setItem(foundItem[0]);
+        })
+    })
+    return <ItemDetail item={item}/>
 }
-export default ItemDetalContainer
+export default ItemDetailContainer
