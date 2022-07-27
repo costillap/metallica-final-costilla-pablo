@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/itemCount';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import ItemDetalContainer from './components/itemDetailContainer';
+import Cart from "./components/cart"
 
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
     <BrowserRouter>
     <NavBar/>
       <Routes>
+        
         <Route index path='/' element={<ItemListContainer/>}/>
         <Route path='item/:id' element={<ItemDetalContainer/>}/>        
         <Route path='*' element={<div className='container text-center col-2' style={{backgroundColor: "grey"}}>Error 404 Not Found</div>} />
+        <Route index path='/cart' element={<Cart/>}/>
       </Routes>
     </BrowserRouter>
     </>

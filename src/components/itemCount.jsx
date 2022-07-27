@@ -1,8 +1,7 @@
 import { Button } from "bootstrap";
 import { useState } from "react";
 
-const ItemCount = () => {
-    const stock=10
+const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(0);
     const sumarCarrito = (operacion) => {
         if (operacion === "-") {
@@ -19,7 +18,7 @@ const ItemCount = () => {
                 <div className="col-5 my-auto fs-3">Cantidad: {count}</div>
                 <button onClick={() => sumarCarrito("-")} className="btn btn-outline-danger m-1 col-1">-</button>
                 <button onClick={() => sumarCarrito("+")} className="btn btn-outline-danger m-1 col-1">+</button>
-                <button disabled={count === 0} className="btn btn-info m-1 col-3">COMPRAR</button>
+                <button onClick={() => {onAdd(count); alert("Cantidad de items agregados: "+count)}} disabled={count === 0} className="btn btn-info m-1 col-3">COMPRAR</button>
 
             </div>
                     
