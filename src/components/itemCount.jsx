@@ -15,7 +15,21 @@ const ItemCount = () => {
     }
     return ( 
         <>
-            <div className="card text-center text-white bg-dark border-danger ms-auto" style={{width : 160}}>
+            <div className="row mx-auto my-2">
+                <div className="col-5 my-auto fs-3">Cantidad: {count}</div>
+                <button onClick={() => sumarCarrito("-")} className="btn btn-outline-danger m-1 col-1">-</button>
+                <button onClick={() => sumarCarrito("+")} className="btn btn-outline-danger m-1 col-1">+</button>
+                <button disabled={count === 0} className="btn btn-info m-1 col-3">COMPRAR</button>
+
+            </div>
+                    
+        </>
+        
+     );
+}
+ 
+export default ItemCount ;
+/* <div className="text-center text-white bg-dark border-danger ms-auto" style={{width : 160}}>
                 <div className="card-body">
                     <h5 className="card-title m-1 fs-5">CARRITO</h5>
                     <div className="card-title fs-3">{count}</div>
@@ -23,10 +37,4 @@ const ItemCount = () => {
                     <button onClick={() => sumarCarrito("+")} className="btn btn-outline-danger m-2">+</button>
                     <button disabled={count === 0} className="btn btn-info m-2">COMPRAR</button>
                 </div>
-            </div>
-        </>
-        
-     );
-}
- 
-export default ItemCount ;
+            </div> */
