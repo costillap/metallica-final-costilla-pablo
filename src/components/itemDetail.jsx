@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import ItemCount from "./itemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
 
 
 const ItemDetail = ({item} ) => {
@@ -9,7 +10,7 @@ const ItemDetail = ({item} ) => {
     const navigate = useNavigate();
     const onAdd= (amount) =>{
         setAmount(amount);
-        navigate("/cart")
+        //navigate("/cart")
     }
     return(
     <div className="container my-5">
@@ -21,7 +22,7 @@ const ItemDetail = ({item} ) => {
                 <p className="card-text">{category}</p>
                 <p className="card-text">{detalle}</p>
                 <div className="col p-1 text-center mt-5">
-                    {(amount == 0) && <ItemCount stock={stock} initial={0} onAdd={onAdd}  className=""></ItemCount>}
+                    {(amount === 0) && <ItemCount stock={stock} initial={0} onAdd={onAdd}  className=""></ItemCount>}
                     <Link to={"/"} className="btn btn-danger row m-1">cerrar</Link>
                 </div>
                 

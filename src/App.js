@@ -1,27 +1,24 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import NavBar from "./components/navbar"
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/itemCount';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import ItemDetalContainer from './components/itemDetailContainer';
-import Cart from "./components/cart"
+import React from 'react';
+import NavBar from "./components/navbar";
+
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import RoutesContainer from './components/route';
+import CartContext from './components/cartContext';
 
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <NavBar/>
-      <Routes>
-        
-        <Route index path='/' element={<ItemListContainer/>}/>
-        <Route path='item/:id' element={<ItemDetalContainer/>}/>        
-        <Route path='*' element={<div className='container text-center col-2' style={{backgroundColor: "grey"}}>Error 404 Not Found</div>} />
-        <Route index path='/cart' element={<Cart/>}/>
-      </Routes>
-    </BrowserRouter>
+    <CartContext>
+      <BrowserRouter>
+        <NavBar/>
+        <RoutesContainer/>  
+      </BrowserRouter>
+    </CartContext>
     </>
   );
 }
