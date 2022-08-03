@@ -1,17 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import ItemCount from "./itemCount";
 import { useState, useContext } from "react";
-
+import { CartContext } from "./CartContext";
 
 
 const ItemDetail = ({item} ) => {
     const [amount, setAmount] = useState(0);
     const {title, stock, category, detalle, img} = item;
     const navigate = useNavigate();
+    const inicial = useContext(CartContext);
     const onAdd= (amount) =>{
         setAmount(amount);
         //navigate("/cart")
-    }
+    };
+    console.log(inicial);
     return(
     <div className="container my-5">
         <div className="card col-6 mx-auto" >

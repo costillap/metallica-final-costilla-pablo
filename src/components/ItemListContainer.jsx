@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect} from "react";
 import ItemList from "./itemList";
 import data from "./utils/data.json"
-import { useParams } from "react-router-dom";
+
 
 const ItemListContainer = ({greeting}) => {
     const [items, setItems] = useState([]);

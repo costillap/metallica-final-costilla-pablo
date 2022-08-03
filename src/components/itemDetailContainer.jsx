@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     });
     useEffect(()=>{
         promise.then((response) =>{
-            const foundItem = response.filter(item => item.id === id)
+            const foundItem = response.filter(item => item.id == id)
             setItem(foundItem[0]);
         })
     })

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, onAdd}) => {
     const [count, setCount] = useState(0);
     const sumarCarrito = (operacion) => {
         if (operacion === "-") {
