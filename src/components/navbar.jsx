@@ -9,7 +9,7 @@ const NavBar = () => {
             <div className="nav navbar-dark">
                 <Link to={"/"} className="nav-link" style={{color: "white"}} href="">home</Link>
                 <Link to={"/products"} className="nav-link" style={{color: "white"}} href="">productos</Link>
-                <a className="nav-link" style={{color: "white"}} href=""><CartWidjet></CartWidjet></a>    
+                <Link to={"/cart"} className="nav-link" style={{color: "white"}} href=""><CartWidjet ></CartWidjet></Link>    
             </div>
         </nav>
     );

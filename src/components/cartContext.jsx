@@ -25,8 +25,13 @@ const CartProvider = (props) => {
     const remuveItem = (itemId) =>{
         setItemsCarrito(itemsCarrito.filter(element => element.item.id != itemId))
     }
+    const total = () =>{
+        return itemsCarrito.reduce(
+            (valorAnterior, valorActual) => valorAnterior + (valorActual.item.price * valorActual.amount),0
+            );
+    }
     return ( 
-        <CartContext.Provider value={{addItem, itemsCarrito}}>{props.children}</CartContext.Provider>
+        <CartContext.Provider value={{addItem, itemsCarrito, remuveItem, clear, total}}>{props.children}</CartContext.Provider>
      );
 }
  

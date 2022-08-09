@@ -18,7 +18,7 @@ const ItemCount = ({stock, onAdd}) => {
                 <div className="col-5 my-auto fs-3">Cantidad: {count}</div>
                 <button onClick={() => sumarCarrito("-")} className="btn btn-outline-danger m-1 col-1">-</button>
                 <button onClick={() => sumarCarrito("+")} className="btn btn-outline-danger m-1 col-1">+</button>
-                <button onClick={() => {onAdd(count); alert("Cantidad de items agregados: "+count)}} disabled={count === 0} className="btn btn-info m-1 col-3">COMPRAR</button>
+                <button onClick={() => {onAdd(count); alert("Cantidad de items agregados: "+count)}} disabled={count === 0} className="btn btn-info m-1 col-3">Agregar</button>
 
             </div>
                     

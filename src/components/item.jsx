@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
 const Item = ({item}) => {
-    const {title, stock, category, id, img } = item;
+    const {title, stock, category, id, img, price } = item;
     return(
     <div className="card" >
         <img src={img} className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title">{title}</h5>
+            <h6>${price}</h6>
             <p className="card-text">{stock}</p>
             <p className="card-text">{category}</p>
             <Link to={`item/${id}`} className="btn btn-primary">Mas</Link>

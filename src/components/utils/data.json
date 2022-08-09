@@ -1,6 +1,7 @@
 [{
     "id": 1,
     "title": "S&M",
+    "price": "100",
     "category": "DVD",
     "stock": 5,
     "img": "https://i.ebayimg.com/images/g/fPEAAMXQgJRQ9ini/s-l500.jpg",
@@ -8,6 +9,7 @@
   }, {
     "id": 2,
     "title": "Some kind of Monster",
+    "price": "120",
     "category": "DVD",
     "stock": 10,
     "img": "https://http2.mlstatic.com/D_NQ_NP_151811-MLA20637195863_032016-O.jpg",
@@ -15,6 +17,7 @@
   }, {
     "id": 3,
     "title": "Live Shit: Binge & Purge",
+    "price": "110",
     "category": "DVD",
     "stock": 3,
     "img": "https://www.mautorland.com/wp-content/uploads/2018/01/AD99F786-2622-4C92-8A88-49539B5242A6.jpeg",
@@ -22,6 +25,7 @@
   }, {
     "id": 4,
     "title": "Cunning Stunts",
+    "price": "120",
     "category": "DVD",
     "stock": 3,
     "img": "https://m.media-amazon.com/images/I/4118ZB9Q1QL._SY445_.jpg",
@@ -29,6 +33,7 @@
   }, {
     "id": 5,
     "title": "Ride The Lighting",
+    "price": "80",
     "category": "CD",
     "stock": 6,
     "img": "https://http2.mlstatic.com/D_NQ_NP_728701-MLA42579643835_072020-W.jpg",
@@ -36,6 +41,7 @@
   }, {
     "id": 6,
     "title": "Master of Puppets",
+    "price": "90",
     "category": "CD",
     "stock": 2,
     "img": "https://http2.mlstatic.com/D_NQ_NP_790097-MLA26095703742_092017-W.jpg",
@@ -43,6 +49,7 @@
   }, {
     "id": 7,
     "title": "Black Album",
+    "price": "90",
     "category": "CD",
     "stock": 6,
     "img": "https://http2.mlstatic.com/D_NQ_NP_124201-MLA20294766275_052015-O.jpg",
@@ -50,6 +57,7 @@
   }, {
     "id": 8,
     "title": "Hardwired... to self-destruct",
+    "price": "80",
     "category": "CD",
     "stock": 9,
     "img": "https://icarusmusicstore.com/19246-home_default/-metallica-hardwired-to-self-destruct-2cd-digipack.jpg",
@@ -57,6 +65,7 @@
   }, {
     "id": 9,
     "title": "...And Justice for All",
+    "price": "90",
     "category": "Drama",
     "stock": 5,
     "img": "https://www.nacionrock.com/wp-content/uploads/20150807_213942_7549_752892.jpeg",
