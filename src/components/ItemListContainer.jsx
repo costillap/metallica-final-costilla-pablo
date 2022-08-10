@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect} from "react";
-import ItemList from "./itemList";
-import data from "./utils/data.json"
+import ItemList from "./ItemList";
+import data from "./utils/Data.json"
 
 
 const ItemListContainer = ({greeting}) => {

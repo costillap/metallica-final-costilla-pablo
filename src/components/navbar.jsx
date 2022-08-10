@@ -1,4 +1,4 @@
-import CartWidjet from "./cartwidjet";
+import CartWidjet from "./Cartwidjet";
 import logo from './img/logo.png';
 import {Link} from "react-router-dom";
 const NavBar = () => {
@@ -8,8 +8,8 @@ const NavBar = () => {
            
             <div className="nav navbar-dark">
                 <Link to={"/"} className="nav-link" style={{color: "white"}} href="">home</Link>
-                <Link to={"/products"} className="nav-link" style={{color: "white"}} href="">productos</Link>
-                <Link to={"/cart"} className="nav-link" style={{color: "white"}} href=""><CartWidjet ></CartWidjet></Link>    
+                <Link to={"/"} className="nav-link" style={{color: "white"}} href="">productos</Link>
+                <Link to={"/Cart"} className="nav-link" style={{color: "white"}} href=""><CartWidjet/></Link>    
             </div>
         </nav>
     );

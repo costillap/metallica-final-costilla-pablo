@@ -1,17 +1,18 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ItemCount from "./itemCount";
+import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
 import { CartContext } from "./CartContext";
 
 
 const ItemDetail = ({item} ) => {
-    const [amount, setAmount] = useState(0);
+    const [amount] = useState(0);
     const {title, stock, category, detalle, img, price} = item;
     const navigate = useNavigate();
     const {addItem} = useContext(CartContext);
     const onAdd= (amount) =>{
         addItem(item, amount);
-        //navigate("/cart")
+        navigate("/Cart")
     };
     console.log({addItem});
     return(

@@ -1,7 +1,8 @@
-import ItemDetail from "./itemDetail";
+import React from "react";
+import ItemDetail from "./ItemDetail";
 import { useEffect } from "react";
 import { useState } from "react";
-import data from "./utils/data.json"
+import data from "./utils/Data.json"
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
