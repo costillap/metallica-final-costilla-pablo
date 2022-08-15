@@ -5,6 +5,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from "./components/Navbar";
 import {BrowserRouter} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
@@ -16,9 +17,11 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <NavBar/>
+        
         <Routes>
             <Route index path='/' element={<ItemListContainer/>}/>
-            <Route path='Item/:id' element={<ItemDetailContainer/>}/>        
+            <Route path='/Item/:id' element={<ItemDetailContainer/>}/>
+            <Route path='/category/:type' element={<ItemListContainer/>}/>        
             <Route path='*' element={<div className='container text-center col-2' style={{backgroundColor: "grey"}}>Error 404 Not Found</div>} />
             <Route path='/Cart' element={<Cart/>}/>
         </Routes>  

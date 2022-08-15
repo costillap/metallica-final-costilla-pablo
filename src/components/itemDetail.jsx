@@ -7,7 +7,7 @@ import { CartContext } from "./CartContext";
 
 const ItemDetail = ({item} ) => {
     const [amount] = useState(0);
-    const {title, stock, category, detalle, img, price} = item;
+    const {title, stock, category, description, img, price} = item;
     const navigate = useNavigate();
     const {addItem} = useContext(CartContext);
     const onAdd= (amount) =>{
@@ -24,7 +24,7 @@ const ItemDetail = ({item} ) => {
                 <h6>${price}</h6>
                 <p className="card-text">{stock}</p>
                 <p className="card-text">{category}</p>
-                <p className="card-text">{detalle}</p>
+                <p className="card-text">{description}</p>
                 <div className="col p-1 text-center mt-5">
                     {(amount === 0) && <ItemCount stock={stock} initial={0} onAdd={onAdd}  className=""></ItemCount>}
                     <Link to={"/"} className="btn btn-danger row m-1">cerrar</Link>
