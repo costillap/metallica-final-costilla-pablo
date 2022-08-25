@@ -1,8 +1,21 @@
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 export const CartContext = React.createContext();
 const CartProvider = (props) => {
-    const [itemsCarrito, setItemsCarrito] = useState([])
+    const [itemsCarrito, setItemsCarrito] = useState([]);
+    const sendOrder = (totalCarrito, clientData) => {
+        const db = getFirestore();
+        const orderCollection = collection(db, "orders" );
+        const order = {
+            items: itemsCarrito,
+            total: totalCarrito,
+            client: clientData,
+        };
+        addDoc(orderCollection, order)
+        .then((res) => console.log(res.id))
+        .catch((err) => console.log("error", err));
+    };
     const addItem = (item, amount) =>{
         const newItem = isInCart(item)
         if (newItem) {
@@ -31,7 +44,7 @@ const CartProvider = (props) => {
             );
     }
     return ( 
-        <CartContext.Provider value={{addItem, itemsCarrito, remuveItem, clear, total}}>{props.children}</CartContext.Provider>
+        <CartContext.Provider value={{addItem, itemsCarrito, remuveItem, clear, total, sendOrder,}}>{props.children}</CartContext.Provider>
      );
 }
  
